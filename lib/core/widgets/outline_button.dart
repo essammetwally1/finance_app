@@ -24,7 +24,7 @@ class OutlinedButtonWidget extends StatelessWidget {
           borderRadius: BorderRadiusGeometry.circular(8.r),
         ),
         // backgroundColor: backgroundColor ?? AppColor.primary,
-        fixedSize: Size(331, 56),
+        fixedSize: Size(331.w, 56.h),
       ),
 
       onPressed: () {},

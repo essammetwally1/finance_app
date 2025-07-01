@@ -23,7 +23,7 @@ class ElevetedButtonWidget extends StatelessWidget {
           borderRadius: BorderRadiusGeometry.circular(8.r),
         ),
         backgroundColor: backgroundColor ?? AppColor.primary,
-        fixedSize: Size(335, 56),
+        fixedSize: Size(335.w, 56.h),
       ),
 
       onPressed: () {},
@@ -32,7 +32,7 @@ class ElevetedButtonWidget extends StatelessWidget {
         title ?? '',
         style: TextStyle(
           color: textColor ?? Colors.white,
-          fontSize: fontSize ?? 15,
+          fontSize: fontSize?.sp ?? 15.sp,
           fontWeight: FontWeight.w800,
         ),
       ),
