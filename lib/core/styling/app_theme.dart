@@ -13,6 +13,5 @@ class AppTheme {
       titleLarge: AppStyles.blueTextStyle,
       titleMedium: AppStyles.blackTextStyle,
     ),
-    buttonTheme: ButtonThemeData(buttonColor: AppColor.primary),
   );
 }

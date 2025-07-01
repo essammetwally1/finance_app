@@ -1,3 +1,6 @@
+import 'package:finance_app/core/styling/app_theme.dart';
+import 'package:finance_app/core/widgets/eleveted_button.dart';
+import 'package:finance_app/core/widgets/outline_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -34,11 +37,16 @@ class FinanceApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: const Size(375, 812),
+      builder: (context, child) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          theme: AppTheme.lightTheme,
+          routes: {HomeScreen.routeName: (context) => HomeScreen()},
+          home: child,
+        );
+      },
 
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        routes: {HomeScreen.routeName: (context) => HomeScreen()},
-      ),
+      child: const HomeScreen(),
     );
   }
 }
@@ -49,6 +57,20 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: SizedBox(
+        width: double.infinity,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            ElevetedButtonWidget(title: 'Login', fontSize: 20),
+            SizedBox(height: 50),
+
+            OutlinedButtonWidget(title: 'Register', fontSize: 20),
+          ],
+        ),
+      ),
+    );
   }
 }
